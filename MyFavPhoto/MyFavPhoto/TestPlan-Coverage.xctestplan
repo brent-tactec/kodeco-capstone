@@ -1,0 +1,31 @@
+{
+  "configurations" : [
+    {
+      "id" : "C1280AF1-C8B1-4B66-B29B-7C180E86FF54",
+      "name" : "Configuration 1",
+      "options" : {
+        "targetForVariableExpansion" : null
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:MyFavPhoto.xcodeproj",
+        "identifier" : "846417FC2B0307EB0006BA14",
+        "name" : "MyFavPhotoTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:MyFavPhoto.xcodeproj",
+        "identifier" : "846418062B0307EB0006BA14",
+        "name" : "MyFavPhotoUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

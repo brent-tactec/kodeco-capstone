@@ -6,36 +6,109 @@
 //
 
 import XCTest
+@testable import MyFavPhoto
 
-final class MyFavPhotoUITests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+class MyFavPhotoUITests: XCTestCase {
+  var app: XCUIApplication!
+  override func setUpWithError() throws {
+    app = .init()
+    app.launch()
 
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
+    // In UI tests stop immediately when a failure occurs.
+    continueAfterFailure = false
+  }
 
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
-    }
+  func test_menu() throws {
+    let masterTabBar = app.tabBars["Tab Bar"]
+    let menuButton = masterTabBar.buttons["Search"]
+    menuButton.tap()
+    XCTAssert(masterTabBar.exists)
+    XCTAssert(masterTabBar.buttons["Search"].exists)
+  }
 }
+
+class PhotoSettingsViewUITests: XCTestCase {
+
+  override func setUpWithError() throws {
+    continueAfterFailure = false
+  }
+
+  func testInstructionsButton() {
+    // Launch your app.
+    let app = XCUIApplication()
+    app.launch()
+
+    // Navigate to the PhotoSettingsView.
+    // For example, you can tap the "Settings" tab button if that's where your PhotoSettingsView is located.
+    let settingsTabButton = app.tabBars["Tab Bar"].buttons["Settings"]
+    XCTAssertTrue(settingsTabButton.exists)
+    settingsTabButton.tap()
+
+    // Verify that the "Instructions" button exists and tap it.
+    let instructionsButton = app.buttons["Instructions"]
+    XCTAssertTrue(instructionsButton.exists)
+    instructionsButton.tap()
+  }
+}
+
+class PhotoFavViewUITests: XCTestCase {
+
+  override func setUpWithError() throws {
+    continueAfterFailure = false
+  }
+
+  func testPhotoFavViewContent() {
+    // Launch your app.
+    let app = XCUIApplication()
+    app.launch()
+
+    // Navigate to the PhotoFavView.
+    // For example, you can tap the "Favorites" tab button if that's where your PhotoFavView is located.
+    let favoritesTabButton = app.tabBars["Tab Bar"].buttons["Favorites"]
+    XCTAssertTrue(favoritesTabButton.exists)
+    favoritesTabButton.tap()
+
+    XCTAssertFalse(app.navigationBars["Favorites"].exists)
+
+    let photoCell = app.cells["photoCell"]
+    XCTAssertFalse(photoCell.exists)
+  }
+}
+
+// if more time would add mock JSON data in a file and add to bundle
+
+class PhotoDetailViewUITests: XCTestCase {
+
+  override func setUpWithError() throws {
+    continueAfterFailure = false
+  }
+
+  func testPhotoDetailViewContent() {
+    // Launch the app.
+    let app = XCUIApplication()
+    app.launch()
+
+    let favoritesTabButton = app.tabBars["Tab Bar"].buttons["Favorites"]
+    XCTAssertTrue(favoritesTabButton.exists)
+    favoritesTabButton.tap()
+
+    let photoCell = app.cells["photoCell"]
+    XCTAssertFalse(photoCell.exists)
+
+    let photographerNameLabel = app.staticTexts["Photographer: PhotographerName"]
+    XCTAssertFalse(photographerNameLabel.exists)
+
+    let heartButton = app.buttons["heart"]
+    XCTAssertFalse(heartButton.exists)
+
+    let photographerURLLink = app.links["Photographer URL"]
+    XCTAssertFalse(photographerURLLink.exists)
+
+  }
+}
+
+
+
+
+

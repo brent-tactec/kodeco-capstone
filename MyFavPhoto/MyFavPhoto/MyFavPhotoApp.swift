@@ -6,27 +6,26 @@
 //
 
 import SwiftUI
-import SwiftData
+
 
 @main
 struct MyFavPhotoApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-        .modelContainer(sharedModelContainer)
+  @State private var hasLaunchedBefore = UserDefaults.standard.bool(forKey: "hasLaunchedBefore")
+  @AppStorage("isDarkMode") private var isDarkMode = false
+  
+  var body: some Scene {
+    WindowGroup {
+      if !hasLaunchedBefore {
+        ReadMeView(onStart: {
+          hasLaunchedBefore = true
+          UserDefaults.standard.set(true, forKey: "hasLaunchedBefore")
+        }, isFromSettings: false)
+      } else {
+        PhotoMainView()
+          .environmentObject(PhotoFavModel())
+          .environment(\.colorScheme, isDarkMode ? .dark : .light)
+      }
     }
+  }
 }
+

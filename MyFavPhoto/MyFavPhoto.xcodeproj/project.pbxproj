@@ -3,18 +3,30 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		846417EF2B0307EA0006BA14 /* MyFavPhotoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846417EE2B0307EA0006BA14 /* MyFavPhotoApp.swift */; };
-		846417F12B0307EA0006BA14 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846417F02B0307EA0006BA14 /* ContentView.swift */; };
-		846417F32B0307EA0006BA14 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846417F22B0307EA0006BA14 /* Item.swift */; };
-		846417F52B0307EB0006BA14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846417F42B0307EB0006BA14 /* Assets.xcassets */; };
-		846417F82B0307EB0006BA14 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846417F72B0307EB0006BA14 /* Preview Assets.xcassets */; };
-		846418022B0307EB0006BA14 /* MyFavPhotoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846418012B0307EB0006BA14 /* MyFavPhotoTests.swift */; };
-		8464180C2B0307EB0006BA14 /* MyFavPhotoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464180B2B0307EB0006BA14 /* MyFavPhotoUITests.swift */; };
-		8464180E2B0307EB0006BA14 /* MyFavPhotoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464180D2B0307EB0006BA14 /* MyFavPhotoUITestsLaunchTests.swift */; };
+		8464181E2B0325270006BA14 /* PhotoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464181D2B0325270006BA14 /* PhotoStore.swift */; };
+		846418232B0326BF0006BA14 /* PhotoNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846418222B0326BF0006BA14 /* PhotoNetwork.swift */; };
+		846418262B032A0E0006BA14 /* PhotoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846418252B032A0E0006BA14 /* PhotoDetailView.swift */; };
+		846418292B032A790006BA14 /* PhotoDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846418282B032A790006BA14 /* PhotoDecoder.swift */; };
+		8464182C2B032ACA0006BA14 /* PhotoSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464182B2B032ACA0006BA14 /* PhotoSearchView.swift */; };
+		8464182F2B04A46C0006BA14 /* PhotoMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464182E2B04A46C0006BA14 /* PhotoMainView.swift */; };
+		846418322B04A5220006BA14 /* PhotoFavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846418312B04A5220006BA14 /* PhotoFavView.swift */; };
+		846418352B04A8FC0006BA14 /* PhotoFavModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846418342B04A8FC0006BA14 /* PhotoFavModel.swift */; };
+		846418382B06F7D60006BA14 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 846418372B06F7D60006BA14 /* Config.plist */; };
+		8464183B2B0737840006BA14 /* PhotoNetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464183A2B0737840006BA14 /* PhotoNetworkingProtocol.swift */; };
+		8470C9AE2B1A996D00722883 /* MyFavPhotoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464180D2B0307EB0006BA14 /* MyFavPhotoUITestsLaunchTests.swift */; };
+		8470C9B02B1A9E0F00722883 /* MyFavPhotoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464180B2B0307EB0006BA14 /* MyFavPhotoUITests.swift */; };
+		84E9C73D2B0D664900B24C36 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846417F72B0307EB0006BA14 /* Preview Assets.xcassets */; };
+		84E9C73F2B0D667900B24C36 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E9C73E2B0D667900B24C36 /* Launch Screen.storyboard */; };
+		84E9C75D2B0D6A8E00B24C36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E9C75C2B0D6A8E00B24C36 /* Assets.xcassets */; };
+		84E9C7A12B0D80D100B24C36 /* PhotoSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E9C7A02B0D80D100B24C36 /* PhotoSettingsView.swift */; };
+		84E9C7A52B0DA97500B24C36 /* ReadMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E9C7A42B0DA97500B24C36 /* ReadMeView.swift */; };
+		84E9C7A62B0DB1E700B24C36 /* MyFavPhotoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846418012B0307EB0006BA14 /* MyFavPhotoTests.swift */; };
+		84E9C7AA2B0ED9C200B24C36 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E9C7A92B0ED9C200B24C36 /* URLSessionProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,17 +47,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		841E96582B143B7300503655 /* TestPlan-coverage.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "TestPlan-coverage.xctestplan"; sourceTree = "<group>"; };
 		846417EB2B0307EA0006BA14 /* MyFavPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFavPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846417EE2B0307EA0006BA14 /* MyFavPhotoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavPhotoApp.swift; sourceTree = "<group>"; };
-		846417F02B0307EA0006BA14 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		846417F22B0307EA0006BA14 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		846417F42B0307EB0006BA14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		846417F72B0307EB0006BA14 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		846417FD2B0307EB0006BA14 /* MyFavPhotoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFavPhotoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		846418012B0307EB0006BA14 /* MyFavPhotoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavPhotoTests.swift; sourceTree = "<group>"; };
 		846418072B0307EB0006BA14 /* MyFavPhotoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFavPhotoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8464180B2B0307EB0006BA14 /* MyFavPhotoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavPhotoUITests.swift; sourceTree = "<group>"; };
 		8464180D2B0307EB0006BA14 /* MyFavPhotoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavPhotoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8464181B2B0322900006BA14 /* Test plan Overview.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Test plan Overview.md"; sourceTree = "<group>"; };
+		8464181D2B0325270006BA14 /* PhotoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStore.swift; sourceTree = "<group>"; };
+		846418222B0326BF0006BA14 /* PhotoNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoNetwork.swift; sourceTree = "<group>"; };
+		846418252B032A0E0006BA14 /* PhotoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailView.swift; sourceTree = "<group>"; };
+		846418282B032A790006BA14 /* PhotoDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDecoder.swift; sourceTree = "<group>"; };
+		8464182B2B032ACA0006BA14 /* PhotoSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchView.swift; sourceTree = "<group>"; };
+		8464182E2B04A46C0006BA14 /* PhotoMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMainView.swift; sourceTree = "<group>"; };
+		846418312B04A5220006BA14 /* PhotoFavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFavView.swift; sourceTree = "<group>"; };
+		846418342B04A8FC0006BA14 /* PhotoFavModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFavModel.swift; sourceTree = "<group>"; };
+		846418372B06F7D60006BA14 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		8464183A2B0737840006BA14 /* PhotoNetworkingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoNetworkingProtocol.swift; sourceTree = "<group>"; };
+		84E9C73E2B0D667900B24C36 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		84E9C75C2B0D6A8E00B24C36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84E9C7A02B0D80D100B24C36 /* PhotoSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSettingsView.swift; sourceTree = "<group>"; };
+		84E9C7A42B0DA97500B24C36 /* ReadMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadMeView.swift; sourceTree = "<group>"; };
+		84E9C7A92B0ED9C200B24C36 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,11 +122,15 @@
 		846417ED2B0307EA0006BA14 /* MyFavPhoto */ = {
 			isa = PBXGroup;
 			children = (
+				846418212B0326810006BA14 /* Views */,
+				846418202B0326740006BA14 /* Models */,
+				8464181C2B03242A0006BA14 /* Data Stores */,
 				846417EE2B0307EA0006BA14 /* MyFavPhotoApp.swift */,
-				846417F02B0307EA0006BA14 /* ContentView.swift */,
-				846417F22B0307EA0006BA14 /* Item.swift */,
-				846417F42B0307EB0006BA14 /* Assets.xcassets */,
+				84E9C75C2B0D6A8E00B24C36 /* Assets.xcassets */,
 				846417F62B0307EB0006BA14 /* Preview Content */,
+				84E9C73E2B0D667900B24C36 /* Launch Screen.storyboard */,
+				8464181B2B0322900006BA14 /* Test plan Overview.md */,
+				841E96582B143B7300503655 /* TestPlan-coverage.xctestplan */,
 			);
 			path = MyFavPhoto;
 			sourceTree = "<group>";
@@ -130,6 +160,40 @@
 			path = MyFavPhotoUITests;
 			sourceTree = "<group>";
 		};
+		8464181C2B03242A0006BA14 /* Data Stores */ = {
+			isa = PBXGroup;
+			children = (
+				8464181D2B0325270006BA14 /* PhotoStore.swift */,
+				846418372B06F7D60006BA14 /* Config.plist */,
+			);
+			path = "Data Stores";
+			sourceTree = "<group>";
+		};
+		846418202B0326740006BA14 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				846418282B032A790006BA14 /* PhotoDecoder.swift */,
+				8464183A2B0737840006BA14 /* PhotoNetworkingProtocol.swift */,
+				846418222B0326BF0006BA14 /* PhotoNetwork.swift */,
+				846418342B04A8FC0006BA14 /* PhotoFavModel.swift */,
+				84E9C7A92B0ED9C200B24C36 /* URLSessionProtocol.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		846418212B0326810006BA14 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				846418252B032A0E0006BA14 /* PhotoDetailView.swift */,
+				8464182B2B032ACA0006BA14 /* PhotoSearchView.swift */,
+				8464182E2B04A46C0006BA14 /* PhotoMainView.swift */,
+				846418312B04A5220006BA14 /* PhotoFavView.swift */,
+				84E9C7A02B0D80D100B24C36 /* PhotoSettingsView.swift */,
+				84E9C7A42B0DA97500B24C36 /* ReadMeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +201,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 846418112B0307EB0006BA14 /* Build configuration list for PBXNativeTarget "MyFavPhoto" */;
 			buildPhases = (
+				8464181A2B0308EA0006BA14 /* ShellScript */,
 				846417E72B0307EA0006BA14 /* Sources */,
 				846417E82B0307EA0006BA14 /* Frameworks */,
 				846417E92B0307EA0006BA14 /* Resources */,
@@ -210,7 +275,7 @@
 				};
 			};
 			buildConfigurationList = 846417E62B0307EA0006BA14 /* Build configuration list for PBXProject "MyFavPhoto" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -234,8 +299,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				846417F82B0307EB0006BA14 /* Preview Assets.xcassets in Resources */,
-				846417F52B0307EB0006BA14 /* Assets.xcassets in Resources */,
+				84E9C73D2B0D664900B24C36 /* Preview Assets.xcassets in Resources */,
+				84E9C73F2B0D667900B24C36 /* Launch Screen.storyboard in Resources */,
+				84E9C75D2B0D6A8E00B24C36 /* Assets.xcassets in Resources */,
+				846418382B06F7D60006BA14 /* Config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,14 +322,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8464181A2B0308EA0006BA14 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nPATH=/opt/homebrew/bin:$PATH\nif [ -f ~/com.raywenderlich.swiftlint.yml ]; then\n  if which swiftlint >/dev/null; then\n    swiftlint --no-cache --config ~/com.raywenderlich.swiftlint.yml\n  fi\nfi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		846417E72B0307EA0006BA14 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				846417F12B0307EA0006BA14 /* ContentView.swift in Sources */,
-				846417F32B0307EA0006BA14 /* Item.swift in Sources */,
+				846418292B032A790006BA14 /* PhotoDecoder.swift in Sources */,
+				84E9C7A52B0DA97500B24C36 /* ReadMeView.swift in Sources */,
+				846418232B0326BF0006BA14 /* PhotoNetwork.swift in Sources */,
+				84E9C7A12B0D80D100B24C36 /* PhotoSettingsView.swift in Sources */,
+				8464182F2B04A46C0006BA14 /* PhotoMainView.swift in Sources */,
+				8464183B2B0737840006BA14 /* PhotoNetworkingProtocol.swift in Sources */,
+				8464182C2B032ACA0006BA14 /* PhotoSearchView.swift in Sources */,
+				846418322B04A5220006BA14 /* PhotoFavView.swift in Sources */,
+				846418262B032A0E0006BA14 /* PhotoDetailView.swift in Sources */,
+				8464181E2B0325270006BA14 /* PhotoStore.swift in Sources */,
+				84E9C7AA2B0ED9C200B24C36 /* URLSessionProtocol.swift in Sources */,
 				846417EF2B0307EA0006BA14 /* MyFavPhotoApp.swift in Sources */,
+				846418352B04A8FC0006BA14 /* PhotoFavModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				846418022B0307EB0006BA14 /* MyFavPhotoTests.swift in Sources */,
+				84E9C7A62B0DB1E700B24C36 /* MyFavPhotoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,8 +376,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8464180C2B0307EB0006BA14 /* MyFavPhotoUITests.swift in Sources */,
-				8464180E2B0307EB0006BA14 /* MyFavPhotoUITestsLaunchTests.swift in Sources */,
+				8470C9B02B1A9E0F00722883 /* MyFavPhotoUITests.swift in Sources */,
+				8470C9AE2B1A996D00722883 /* MyFavPhotoUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,7 +449,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -408,7 +506,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -432,6 +530,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -461,6 +560,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -527,9 +627,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.tactec.MyFavPhotoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = MyFavPhoto;
 			};
 			name = Debug;
@@ -545,9 +649,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.tactec.MyFavPhotoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = MyFavPhoto;
 			};
 			name = Release;

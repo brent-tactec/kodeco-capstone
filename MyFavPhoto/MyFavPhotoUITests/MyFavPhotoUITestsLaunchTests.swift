@@ -1,11 +1,12 @@
-//
+////
 //  MyFavPhotoUITestsLaunchTests.swift
-//  MyFavPhotoUITests
+// 
 //
 //  Created by Brent Reed on 2023-11-13.
 //
 
 import XCTest
+@testable import MyFavPhoto
 
 final class MyFavPhotoUITestsLaunchTests: XCTestCase {
 

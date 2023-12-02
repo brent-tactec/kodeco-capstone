@@ -8,11 +8,32 @@
 import SwiftUI
 
 struct PhotoMainView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+
+  var body: some View {
+    TabView {
+      PhotoSearchView()
+        .tabItem {
+          Label("Search", systemImage: "magnifyingglass")
+        }
+        .tag(0)
+
+      PhotoFavView() // Assuming you'll implement this view later
+        .tabItem {
+          Label("Favorites", systemImage: "star.fill")
+        }
+        .tag(1)
+
+      PhotoSettingsView()
+        .tabItem {
+          Label("Settings", systemImage:  "gearshape")
+        }
+        .tag(2)
     }
+  }
 }
 
+
+
 #Preview {
-    PhotoMainView()
+  PhotoMainView()
 }
